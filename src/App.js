@@ -13,8 +13,8 @@ var animalsKeys = Object.keys(animals);
 export default function App() {
 	const [userInputMeaning, emojiMeaning] = useState("");
 
-	function emojiInput() {
-		var Input = event.target.value;
+	function emojiInput(e) {
+		var Input = e.target.value;
 		var meaning = animals[Input];
 		if (meaning === undefined) {
 			meaning = "Not Found in Database";
